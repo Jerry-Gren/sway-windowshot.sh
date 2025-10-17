@@ -2,6 +2,8 @@
 
 A robust script for pixel-perfect focused window screenshots on Sway/wlroots.
 
+![Sway Windowshot Demo](usage-demo.gif)
+
 ## The Problem
 
 Standard screenshot tools often fail in complex wlroots environments, especially with HiDPI scaling, mixed layouts (horizontal/vertical splits), and custom bars like Waybar. This script solves common issues such as:
