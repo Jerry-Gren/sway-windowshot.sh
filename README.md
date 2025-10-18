@@ -138,10 +138,20 @@ If `wev` doesn't give a clear result, this method finds the raw "keycode," which
 
 > **Note:** Some keyboards send a hardwired key combination (like `Super+Shift+S`). If you see multiple key events for a single press, you should bind your command to that final key combination directly in Sway.
 
-## License
+## Troubleshooting
 
-This project is licensed under the MIT License.
+### Mouse Cursor Appears in Screenshot
+
+* **Symptom:** The mouse cursor is visible in the final screenshot.
+    
+* **Cause:** Under normal conditions, this script will not capture the mouse cursor. However, we have observed that the cursor **is captured** if the screenshot is taken while a screen recording tool, such as `wf-recorder`, is simultaneously active. This is likely due to the Wayland compositor changing how the cursor is rendered to ensure it's included in the video stream.
+    
+* **Solution:** The recommended workaround is to **pause your screen recording** before taking a window screenshot, and then resume it afterward.
 
 ## Contributing
 
 Bug reports, feature requests, and pull requests are welcome! Please feel free to open an issue to discuss your ideas.
+
+## License
+
+This project is licensed under the MIT License.
